@@ -1,10 +1,14 @@
-
+/**
+ * Tester used to run Population
+ * @author Justin Krum
+ *
+ */
 public class Simulate {
 	
 	
 	public static void main(String[] args) {
 		
-		String targetString = "YOUTUBE VIDEOS BAEBY";
+		String targetString = "example string";
 		int populationSize = 1000;
 		int mutationRate = 1;
 		
@@ -32,9 +36,14 @@ public class Simulate {
 		
 	}
 	
-	
+	/**
+	 * 
+	 * 
+	 * @param population Passed from the main method
+	 * @param targetString Passed from the main method
+	 */
 	static void bestFitness(Population population, String targetString) {
-		DNA bestFitness = population.getBestFitness();
+		Individual bestFitness = population.getBestFitness();
 		
 //		System.out.println("Target String \tFitness: " + targetString.length());
 		System.out.println(bestFitness.getGenes() + "\tFitness: " + bestFitness.getNormalFitness());
